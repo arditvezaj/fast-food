@@ -1,0 +1,84 @@
+body {
+    background-color: #151515;
+    color: #0f0e0e;
+}
+
+main {
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.text {
+    color: #f59739;
+}
+
+#carouselExampleControls {
+    max-width: 30rem;
+    width: 30rem;
+    height: 25rem;
+    margin: 4rem auto;
+}
+
+#carouselExampleControls img {
+    width: 25rem;
+    height: 25rem;
+    object-fit: cover;
+}
+
+#food {
+    margin: 5rem auto;
+    width: 50rem;
+    
+}
+
+#food img {
+    height: 12rem;
+    object-fit: cover;
+}
+
+#food a {
+    background-color: #f59739;
+}
+
+#food a:hover {
+    background-color: #f4b34a;
+    color: #0f0e0e;
+}
+
+.card {
+    height: 23rem;
+    
+}
+
+#footer {
+    background-color: #e18529;
+    color: #0f0e0e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 4rem auto;
+    margin-bottom: 0;
+}
+
+#footer div{
+   margin: 2rem 4rem; 
+}
+
+#footer-part-one {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#footer a, #footer p{
+    text-decoration: none;
+    color: #0f0e0e;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#footer a:hover {
+    text-decoration: underline;
+}
