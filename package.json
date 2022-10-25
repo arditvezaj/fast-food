@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "mongodb": "^4.11.0"
+  },
+  "name": "fast-food",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arditvezaj/fast-food.git"
+  },
+  "author": "Ardit Vezaj",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arditvezaj/fast-food/issues"
+  },
+  "homepage": "https://github.com/arditvezaj/fast-food#readme",
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

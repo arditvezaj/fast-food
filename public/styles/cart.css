@@ -1,0 +1,55 @@
+#navbar {
+    background-color: #e18529;
+}
+
+body {
+  background-color: #151515;
+  color: #000000;
+}
+
+#text {
+  color: #e18529;
+  margin-top: 5rem;
+  text-align: center;
+}
+
+#order-control {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+}
+
+#order-control li {
+  display: flex;
+  background-color: azure;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+#order-control img {
+  width: 16rem;
+  height: 12rem;
+  border-radius: 8px;
+  padding: 0;
+  margin: 0;
+}
+
+#order-control li div {
+  display: flex;
+  flex-direction: column;
+  margin: 0 2rem;
+}
+
+#order-control button {
+  background-color: #e18529;
+  color: #000000;
+}
+
+#order-control button:hover {
+  background-color: #f4b34a;
+}

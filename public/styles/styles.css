@@ -27,7 +27,7 @@ main {
 
 #food {
     margin: 5rem auto;
-    width: 50rem;
+    width: 60rem;
     
 }
 
@@ -36,18 +36,18 @@ main {
     object-fit: cover;
 }
 
-#food a {
+#food button {
     background-color: #f59739;
+    color: #0f0e0e;
 }
 
-#food a:hover {
+#food button:hover {
     background-color: #f4b34a;
-    color: #0f0e0e;
+    
 }
 
 .card {
     height: 23rem;
-    
 }
 
 #footer {
@@ -81,4 +81,10 @@ main {
 
 #footer a:hover {
     text-decoration: underline;
+}
+
+.error {
+    margin-top: 8rem;
+    color: #e18529;
+    font-size: 2.2rem;
 }

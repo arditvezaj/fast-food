@@ -1,0 +1,13 @@
+#form {
+    margin: 2rem 5rem;
+}
+
+#form button {
+    background-color: #f59739;
+    color: #151515;
+    border-color: #151515;
+}
+
+#form button:hover {
+    background-color: #edc865;
+}

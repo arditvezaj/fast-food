@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <title>Fast Food</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
@@ -12,84 +12,18 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="styles/shared.css" />
-    <link rel="stylesheet" href="styles/styles.css" />
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
       defer
     ></script>
+    <script src="scripts/cart.js" defer></script>
+    <link rel="stylesheet" href="styles/shared.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
   </head>
   <body>
-    <header>
-      <section id="navbar" class="fixed-top">
-        <nav class="navbar navbar-expand-lg">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#"><strong>FastFood</strong></a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#"
-                    >Home</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"></a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    href="#"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Dropdown
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li>
-                      <a class="dropdown-item" href="#">Another action</a>
-                    </li>
-                    <li><hr class="dropdown-divider" /></li>
-                    <li>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled">Disabled</a>
-                </li>
-              </ul>
-              <form class="d-flex" role="search">
-                <input
-                  class="form-control me-2"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-                <button class="btn btn-outline-dark" type="submit">
-                  Search
-                </button>
-              </form>
-            </div>
-          </div>
-        </nav>
-      </section>
-    </header>
-
+    <%- include("includes/header") %>
     <main>
       <h3 class="text">Some of our special offers!</h3>
       <div
@@ -141,7 +75,7 @@
                 <p class="card-text">
                   Best burgers in town with fresh bread and healthy meat.
                 </p>
-                <a href="#" class="btn btn-outline-dark">Order now</a>
+                <button data-food="hamburger" class="btn btn-outline-dark">Add to cart</button>
               </div>
             </div>
           </div>
@@ -153,7 +87,7 @@
                 <p class="card-text">
                   Try pizzas that you will never regret that you did!
                 </p>
-                <a href="#" class="btn btn-outline-dark">Order now</a>
+                <button data-food="pizza" class="btn btn-outline-dark">Add to cart</button>
               </div>
             </div>
           </div>
@@ -165,7 +99,7 @@
                 <p class="card-text">
                   Sometimes all we need is a sandwich and we know where
                 </p>
-                <a href="#" class="btn btn-outline-dark">Order now</a>
+                <button data-food="sandwich" class="btn btn-outline-dark">Add to cart</button>
               </div>
             </div>
           </div>
@@ -177,20 +111,23 @@
                 <p class="card-text">
                   Hot Dogs never been as delicious and hot as now.
                 </p>
-                <a href="#" class="btn btn-outline-dark">Order now</a>
+                <button data-food="hotdog" class="btn btn-outline-dark">Add to cart</button>
               </div>
             </div>
           </div>
           <div class="col">
             <div class="card">
-              <img src="images/fries.jpeg" class="card-img-top" alt="..." />
+              <img name="photo" src="images/fries.jpeg" class="card-img-top" alt="..." />
               <div class="card-body">
-                <h5 class="card-title">French Fries</h5>
-                <p class="card-text">
+                <h5 name="title" class="card-title">French Fries</h5>
+                <p name="description" class="card-text">
                   Tasty and fresh french fries always in each order.
                 </p>
-                <a href="#" class="btn btn-outline-dark">Order now</a>
-              </div>
+                <form action="/cart" method="GET">
+                  <input type="hidden" value="" name="food">
+                <button data-food="frenchfries" class="btn btn-outline-dark">Add to cart</button>
+              </form>
+            </div>
             </div>
           </div>
         </div>
@@ -201,7 +138,7 @@
       <section id="footer">
         <div id="footer-part-one">
           <a href="">Contact us</a>
-          <a href="">About us</a>
+          <a href="/about">About us</a>
           <a href="">Location</a>
         </div>
         <div id="footer-part-two">

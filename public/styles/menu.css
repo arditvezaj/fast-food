@@ -1,0 +1,39 @@
+body {
+    margin: 6rem 0 2rem 0;
+    background-color: rgb(7, 7, 7);
+    text-align: center;
+}
+
+main h1 {
+    color: #f59739;
+    margin: 2rem;
+}
+
+#hamburger-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 22%;
+    padding: 2rem;
+    background-color: aliceblue;
+    border-radius: 8px;
+}
+
+#hamburger-menu div {
+    margin: 0 3rem;
+    text-align: start;
+    margin: 0 auto;
+    
+}
+
+ol{
+    list-style: disc;
+    padding-top: 0.5rem;
+    font-size: 1.5rem;
+}
+
+img {
+    width: 20rem;
+    height: 15rem;
+    border-radius: 4px;
+}

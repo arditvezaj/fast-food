@@ -1,0 +1,7 @@
+#navbar {
+    background-color: #e18529;
+}
+
+#navbar a:hover {
+    font-weight: bold;
+}
