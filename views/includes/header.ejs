@@ -40,14 +40,21 @@
                   Dropdown
                 </a>
                 <ul class="dropdown-menu">
+                  <% if(!locals.isAuth) { %>
                   <li><a class="dropdown-item" href="/signup">SignUp</a></li>
                   <li>
                     <a class="dropdown-item" href="/login">Login</a>
                   </li>
+                  <% } %>
                   <li><hr class="dropdown-divider" /></li>
+                  <% if(locals.isAuth) { %> 
                   <li>
-                    <a class="dropdown-item" href="/logout">Logout</a>
+                    <form action="/logout" method="POST">
+                      <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                      <button>Logout</button>
+                    </form>
                   </li>
+                  <% } %>
                 </ul>
               </li>
             </ul>

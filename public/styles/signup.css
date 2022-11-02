@@ -21,7 +21,6 @@ body {
 
 #form input {
   border-radius: 4px;
-  font-size: 1.4rem;
 }
 
 #form button {
@@ -44,4 +43,11 @@ body {
 
 #form a:hover{
     text-decoration: underline;
+}
+
+#input-error {
+  color: red;
+  background-color: rgb(242, 191, 191);
+  padding: 0.4rem;
+  margin: 0.4rem 0;
 }
