@@ -3,12 +3,11 @@ const express = require("express");
 const bcrypt = require("bcryptjs");
 
 const db = require("../data/database");
-const csrf = require("csurf");
 
 const router = express.Router();
 
 router.get("/", function (req, res) {
-  res.render("index", { csrfToken: req.csrfToken() });
+  res.render("index");
 });
 
 router.get("/about", function (req, res) {
@@ -29,9 +28,7 @@ router.get("/signup", function (req, res) {
   }
 
   req.session.inputData = null;
-
-  const csrfToken = req.csrfToken();
-  res.render("signup", { inputData: sessionInputData, csrfToken: csrfToken });
+  res.render("signup", { inputData: sessionInputData });
 });
 
 router.get("/login", function (req, res) {
@@ -46,11 +43,8 @@ router.get("/login", function (req, res) {
       confirmPassword: "",
     };
   }
-
   req.session.inputData = null;
-
-  const csrfToken = req.csrfToken();
-  res.render("login", { inputData: sessionInputData, csrfToken: csrfToken });
+  res.render("login", { inputData: sessionInputData });
 });
 
 router.post("/signup", async function (req, res) {
@@ -182,7 +176,6 @@ router.post("/logout", function (req, res) {
   req.session.user = null;
   req.session.isAuthenticated = false;
 
-  const csrfToken = req.csrfToken();
   res.redirect("/");
 });
 

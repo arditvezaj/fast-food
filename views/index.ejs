@@ -1,4 +1,5 @@
 <%- include("includes/head") %>
+<script src="/scripts/addToCart.js" defer></script>
   <body>
     <%- include("includes/header") %>
     <main>
@@ -49,10 +50,10 @@
               <img src="images/hamburger.jpeg" class="card-img-top" alt="..." />
               <div class="card-body">
                 <h5 class="card-title">Hamburger</h5>
-                <p class="card-text">
+                <p class="card-text" data-paragraph="hamburger">
                   Best burgers in town with fresh bread and healthy meat.
                 </p>
-                <button data-food="hamburger" class="btn btn-outline-dark">Add to cart</button>
+                <button data-food="hamburger" class="btn btn-outline-dark food">Add to cart</button>
               </div>
             </div>
           </div>
@@ -64,7 +65,7 @@
                 <p class="card-text">
                   Try pizzas that you will never regret that you did!
                 </p>
-                <button data-food="pizza" class="btn btn-outline-dark">Add to cart</button>
+                <button data-food="pizza" class="btn btn-outline-dark food">Add to cart</button>
               </div>
             </div>
           </div>

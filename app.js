@@ -37,6 +37,11 @@ app.use(
 );
 app.use(csrf());
 
+app.use(function(req, res, next) {
+  res.locals.csrfToken = req.csrfToken();
+  next();
+});
+
 app.use(async function (req, res, next) {
   const user = req.session.user;
   const isAuth = req.session.isAuthenticated;

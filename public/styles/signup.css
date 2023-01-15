@@ -7,7 +7,7 @@ body {
 #form form {
   display: flex;
   flex-direction: column;
-  margin: 2rem 26rem;
+  margin: 2rem 37%;
   padding: 2rem;
   justify-content: center;
   font-size: 1.2rem;
@@ -36,13 +36,13 @@ body {
   background-color: #edc865;
 }
 
-#form a{
-    text-decoration: none;
-    color: #f59739;
+#form a {
+  text-decoration: none;
+  color: #f59739;
 }
 
-#form a:hover{
-    text-decoration: underline;
+#form a:hover {
+  text-decoration: underline;
 }
 
 #input-error {

@@ -1,0 +1,23 @@
+main {
+    margin-top: 7rem;
+    color: white;
+    text-align: start;
+    margin: 7rem;
+}
+
+h1 {
+    color: #e18529;
+    text-align: center;
+    margin-bottom: 5rem;
+    font-weight: bold;
+}
+
+#food-list {
+     margin: 3rem 0;
+}
+
+#food-list li {
+    list-style: circle;
+    font-size: 1.5rem;
+    margin: 1.5rem;
+}
