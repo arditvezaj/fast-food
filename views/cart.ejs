@@ -1,6 +1,7 @@
 <%- include("includes/head") %>
     <link rel="stylesheet" href="styles/cart.css" />
     <script src="/scripts/cart.js" async></script>
+    <script src="/scripts/addToCart.js" async></script>
   <body>
     <%- include("includes/header") %>
     <main>
@@ -11,13 +12,13 @@
             <span class="cart-price cart-header cart-column">Price</span>
             <span class="cart-quantity cart-header cart-column">Quantity</span>
         </div>
-        <div class="cart-items">
+        <div class="cart-items" id="cart-items">
             <div class="cart-row">
                 <div class="cart-item cart-column">
                     <img class="cart-item-image" src="/images/hamburger.jpeg" width="100" height="100">
-                    <span class="cart-item-title">T-Shirt</span>
+                    <span class="cart-item-title">Hamburger</span>
                 </div>
-                <span class="cart-price cart-column">$19.99</span>
+                <span class="cart-price cart-column">$10</span>
                 <div class="cart-quantity cart-column">
                     <input class="cart-quantity-input" type="number" value="1">
                     <button class="btn btn-danger" type="button">Remove</button>
@@ -26,18 +27,18 @@
             <div class="cart-row">
                 <div class="cart-item cart-column">
                     <img class="cart-item-image" src="/images/pizza.jpeg" width="100" height="100">
-                    <span class="cart-item-title">Album 3</span>
+                    <span class="cart-item-title">Pizza</span>
                 </div>
-                <span class="cart-price cart-column">$9.99</span>
+                <span class="cart-price cart-column">$10</span>
                 <div class="cart-quantity cart-column">
-                    <input class="cart-quantity-input" type="number" value="2">
+                    <input class="cart-quantity-input" type="number" value="1">
                     <button class="btn btn-danger" type="button">Remove</button>
                 </div>
             </div>
         </div>
         <div class="cart-total">
             <strong class="cart-total-title">Total</strong>
-            <span class="cart-total-price">$39.97</span>
+            <span class="cart-total-price">$20</span>
         </div>
         <button class="btn btn-primary btn-purchase" type="button">Purchase</button>
     </section>

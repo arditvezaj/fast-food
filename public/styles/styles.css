@@ -33,6 +33,7 @@ main {
 
 #food img {
     height: 12rem;
+    width: 40%rem;
     object-fit: cover;
 }
 
@@ -47,7 +48,7 @@ main {
 }
 
 .card {
-    height: 23rem;
+    height: 24rem;
 }
 
 #footer {
